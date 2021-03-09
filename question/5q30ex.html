@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>School Game</title>
+	<link rel="stylesheet" href="../style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  	<script src="jquery-2.2.3.min.js"></script>
+  	<script>
+    $(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+    });
+    var exp=30;
+</script>
+</head>
+<body>
+<div class="oblast ">
+<div class="question ">Что общего у произведений: Злая звезда (Шамякин) и Чернобыльская молитва (Алексиевич)</div>
+
+<a href="javascript:PopUpShow()"><div  class="ans">ОТВЕТ</div></a>
+
+
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        <div class="headerAns">
+        <div class="otvet">Тема Чернобыльской АЭС</div>
+        	
+        </div>
+		<div class="footerAns">
+			<a href="javascript:ball()"class="ansinq1 ansinq" id="tr">ВЕРНО</a>
+			<a href="javascript:miss()"class="ansinq2 ansinq">НЕВЕРНО</a>
+		</div>
+    </div>
+</div>
+</div>
+	
+<script src="../scripts/main.js"></script>
+	
+</body>
+</html>
+
+
