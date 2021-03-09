@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>School Game</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  	<script src="scripts/main.js"></script>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  	<script src="jquery-2.2.3.min.js"></script>
+</head>
+<body>
+<div class="le" ><span id="nazv1" >N1</span> <span id="n1"></span></div>
+<div class="rig"><span id="nazv2">N2</span>  <span id="n2"></span></div>
+<div class="fbox">
+	<div class="q1 q">
+	<div class="nameq">Личности</div>
+	<a href="question/1q10ex.html" class="sqr"><div  class="qbEXP1">10</div></a>
+	<a href="question/1q20ex.html" class="sqr"><div class="qbEXP2 " >20</div></a>
+	<a href="question/1q30ex.html" class="sqr"><div class="qbEXP3 ">30</div></a>
+	<a href="question/1q40ex.html" class="sqr"><div class="qbEXP4 ">40</div></a>
+	<a href="question/1q50ex.html" class="sqr"><div class="qbEXP5 ">50</div></a>
+	</div>
+	<div class="q2 q">
+	<div class="nameq">Даты</div>
+	<a href="question/2q10ex.html" class="sqr"><div class="qbEXP1">10</div></a>
+	<a href="question/2q20ex.html" class="sqr"><div class="qbEXP2">20</div></a>
+	<a href="question/2q30ex.html" class="sqr"><div class="qbEXP3">30</div></a>
+	<a href="question/2q40ex.html" class="sqr"><div class="qbEXP4">40</div></a>
+	<a href="question/2q50ex.html" class="sqr"><div class="qbEXP5">50</div></a>
+	</div>
+	<div class="q3 q">
+	<div class="nameq">Термины</div>
+	<a href="question/3q10ex.html" class="sqr"><div class="qbEXP1">10</div></a>
+	<a href="question/3q20ex.html" class="sqr"><div class="qbEXP2">20</div></a>
+	<a href="question/3q30ex.html" class="sqr"><div class="qbEXP3">30</div></a>
+	<a href="question/3q40ex.html" class="sqr"><div class="qbEXP4">40</div></a>
+	<a href="question/3q50ex.html" class="sqr"><div class="qbEXP5">50</div></a>
+	</div>
+	<div class="q4 q">
+	<div class="nameq">Культура</div>
+	<a href="question/4q10ex.html" class="sqr"><div class="qbEXP1">10</div></a>
+	<a href="question/4q20ex.html" class="sqr"><div class="qbEXP2">20</div></a>
+	<a href="question/4q30ex.html" class="sqr"><div class="qbEXP3">30</div></a>
+	<a href="question/4q40ex.html" class="sqr"><div class="qbEXP4">40</div></a>
+	<a href="question/4q50ex.html" class="sqr"><div class="qbEXP5">50</div></a>
+	</div>
+	<div class="q5 q">
+	<div class="nameq">Литература</div>
+	<a href="question/5q10ex.html" class="sqr"><div class="qbEXP1">10</div></a>
+	<a href="question/5q20ex.html" class="sqr"><div class="qbEXP2">20</div></a>
+	<a href="question/5q30ex.html" class="sqr"><div class="qbEXP3">30</div></a>
+	<a href="question/5q40ex.html" class="sqr"><div class="qbEXP4">40</div></a>
+	<a href="question/5q50ex.html" class="sqr"><div class="qbEXP5">50</div></a>
+	</div>
+
+	
+</div>
+<div onclick="cler()" class="sbros"><i class="zmdi zmdi-refresh zmdi-hc-3x zmdi-flower-alt "></i></div>
+<script>
+$(document).ready(function(){
+		if (localStorage.EXP2team!=undefined){
+			document.getElementById("n2").innerHTML =localStorage.EXP2team;
+		}
+        if (localStorage.EXP1team!=undefined){
+			document.getElementById("n1").innerHTML =localStorage.EXP1team;
+		}
+
+});
+
+	$( ".sqr" ).on( "click", function() {
+		var val=this.href;
+		localStorage.setItem(val, '2');
+ 		console.log(val);
+
+
+});
+
+ 	$(".sqr").each(function(){ 
+     	if (localStorage.getItem(this)=='2'){
+    	 	$(this).css({"background-color":"#E26A6A","color":"white","pointer-events":"none"})
+  		}
+});
+
+</script>
+</body>
+</html>
